@@ -1,0 +1,51 @@
+<% layout('layouts/boilerplate')%>
+
+<div class='row'>
+    <h1 class="text-center">New Company</h1>
+    <div class="col-6 offset-3">
+    <form  action="/companies" method="post" novalidate class="row g-3 validated-form" enctype="multipart/form-data">
+      <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter Company Name" name="company[name]" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+      </div>
+      <div class="input-group mb-3">
+        <input type="file" class="form-control" id="inputGroupFile02" name="image">
+        <label class="input-group-text" for="inputGroupFile02">Upload Logo</label>
+      </div>
+      <div class="mb-3">
+          <label for="ctc" class="form-label">CTC (Lpa)</label>
+          <input type="number" step="0.01" class="form-control" id="name" placeholder="Enter CTC" name="company[ctc]" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>  
+      </div>
+      <div class="mb-3">
+          <label for="role" class="form-label">Role</label>
+          <input type="text" class="form-control" id="role" placeholder="Enter Role" name="company[role]" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+      </div>
+      <div class="mb-3">
+          <label for="location" class="form-label">Location</label>
+          <input type="text" class="form-control" id="location" placeholder="Enter location" name="company[location]" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+      </div>
+      <div class="mb-3">
+          <label for="min_cgpa" class="form-label">Minimum Cgpa</label>
+          <input type="number" step="0.01" class="form-control" id="min_cgpa" placeholder="Enter Minimum Cgpa" name="company[min_cgpa]">
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+      </div>
+      <div class="d-flex justify-content-center mb-5">
+        <button class="btn btn-success">Add Company</button> 
+      </div>    
+    </form>
+</div>
+</div>
