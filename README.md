@@ -69,7 +69,3 @@ nodemon app.js
 ```
 
 3. Open (localhost:3000/) in your browser to use DiRe.
-
-## 🖼 Recording
-
- [Website Demo](https://drive.google.com/drive/folders/1Wh47xX10LzDLpRedsaqX1sScADr4RQXq)
