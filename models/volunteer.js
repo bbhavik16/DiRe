@@ -13,18 +13,16 @@ const volunteerSchema=new Schema({
         type: Number,
         required: true,
     },
-    gender: Boolean,
+    gender: String,
     dob: {
-        type: Date,
-        required: trequestAnimationFrame,
+        type: String,
+        required: true,
     },
-    occupation: Boolean,
+    occupation: String,
     city: String,
     state: String,
-    fieldInterest:Boolean,
+    fieldInterest: [String],
 })
 
-const volunteers=mongoose.model("Volunteer",volunteerSchema);
-module.exports=volunteers;
-
-
+const volunteers = mongoose.model("Volunteer",volunteerSchema);
+module.exports = volunteers;

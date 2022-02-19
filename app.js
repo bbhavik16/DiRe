@@ -10,18 +10,15 @@ const ejsMate = require('ejs-mate');
 const checksum_lib=require("./Patym/checksum");
 const config=require("./Patym/config");
 const Volunteer=require('./models/volunteer');
+const hos=require("./hospital")
+const session = require('express-session')
+const methodOverride = require('method-override')
+const userRoutes = require('./routes/users.js');
+const passport = require('passport');
+const LocalStrategy = require('passport-local');
+const User = require('./models/user');
 
-
-app.set("views", path.join(__dirname, "views"))
-app.set("view engine", "ejs")
-app.engine('ejs', ejsMate)
-app.use(express.urlencoded({ extended: true }))
-const parseUrl = express.urlencoded({ extended: false });
-const parseJson = express.json({ extended: false });
-app.use(express.static(path.join(__dirname, "public")))
-const dbUrl ='mongodb://localhost:27017/dire'
-
-mongoose.connect(dbUrl, {
+mongoose.connect('mongodb://localhost:27017/dire', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
@@ -29,8 +26,42 @@ mongoose.connect(dbUrl, {
 const db = mongoose.connection;
 db.on("error", console.error.bind('console', "connection error:"))
 db.once("open", () => {
-    console.log("Database connected")
+  console.log("Database connected")
 })
+
+
+app.set("views", path.join(__dirname, "views"))
+app.set("view engine", "ejs")
+app.engine('ejs', ejsMate)
+
+app.use(express.urlencoded({ extended: true }))
+app.use(methodOverride("_method"))
+app.use(express.static(path.join(__dirname, 'public')))
+
+const sessionConfig = {
+    secret: 'thisshouldbeabettersecret',
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+        httpOnly: true,
+        expires: Date.now() + 1000*60*60*24*7,
+        maxAge: 1000*60*60*24*7
+    }
+}
+app.use(session(sessionConfig));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+const parseUrl = express.urlencoded({ extended: false });
+const parseJson = express.json({ extended: false });
+app.use(express.static(path.join(__dirname, "public")))
+
+app.use('/volunteer', userRoutes);
 
 app.get('/', (req, res) => {
     res.render("home");
@@ -39,7 +70,18 @@ app.get('/', (req, res) => {
 app.get('/donate/other', (req, res) => {
     res.render("donate/other");
 })
-
+app.post('/donate/other', (req, res) => {
+    const data=req.body;
+    console.log(data.util.pincode)
+    let found = hos.hospital.filter((e) => {
+      if (e.Pin_Code === data.util.pincode) {
+          return e;
+      }
+    }
+)
+console.log(found)
+  res.render("donate/center")
+  })
 app.get('/donate/money',(req,res)=>{
     res.render("donate/money");
 })
@@ -158,14 +200,11 @@ app.post("/paynow", [parseUrl, parseJson], (req, res) => {
        });
   });
 
-app.post('/donate/other', (req, res) => {
-res.render("donate/center")
-})
 
 
-app.get('/volunteer',async( req , res)=>{
-      const volunteer=await Volunteer.find({});
-      res.render('volunteer/index',{ volunteer})
+app.get('/volunteer',async(req , res)=>{
+    const volunteers=await Volunteer.find({});
+    res.render('volunteer/index',{ volunteers})
 })
 
 app.get('/volunteer/new',(req,res)=>{
@@ -175,8 +214,59 @@ app.get('/volunteer/new',(req,res)=>{
 app.get('/volunteer/:id', async(req,res)=>{
       const {id}=req.params;
       const volunteer=await Volunteer.findById(id);
+      
       res.render('volunteer/show',{volunteer});
 })
+
+app.post('/volunteer', async(req,res)=>{
+   const volunteer=new Volunteer({
+      name:req.body.volunteer.name,
+      email:req.body.volunteer.email,
+      phone:req.body.volunteer.phone,
+      gender:req.body.volunteer.gender,
+      dob:req.body.volunteer.dob,
+      occupation:req.body.volunteer.occupation,
+      city:req.body.volunteer.city,
+      state:req.body.volunteer.state,
+      fieldInterest:req.body.volunteer.fieldInterest
+   });
+   await volunteer.save();
+   res.redirect(`/volunteer/${volunteer._id}`);
+ 
+})
+
+app.get('/volunteer/:id/edit',async(req,res)=>{
+     const {id} =req.params;
+     const volunteer=await Volunteer.findById(id);
+     res.render('volunteer/edit',{volunteer});
+})
+
+app.put('/volunteer/:id', async(req,res)=>{
+    const {id}=req.params;
+    const volunteer=await Volunteer.findByIdAndUpdate(id,{
+      name:req.body.volunteer.name,
+      email:req.body.volunteer.email,
+      phone:req.body.volunteer.phone,
+      gender:req.body.volunteer.gender,
+      dob:req.body.volunteer.dob,
+      occupation:req.body.volunteer.occupation,
+      city:req.body.volunteer.city,
+      state:req.body.volunteer.state,
+      fieldInterest:req.body.volunteer.fieldInterest
+   }); 
+    //  console.log(volunteer);
+    res.redirect(`/volunteer/${volunteer._id}`);
+  })
+
+app.delete('/volunteer/:id', async(req,res)=>{
+    const {id}=req.params;
+    const volunteer=await Volunteer.findById(id);
+    await Volunteer.findByIdAndDelete(id);
+    // console.log(volunteer);
+    res.redirect('/volunteer');
+})
+
+
 
 app.listen(3000, () => {
     console.log("Listening on port 3000");

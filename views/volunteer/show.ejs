@@ -1,0 +1,40 @@
+<% layout('layouts/boilerplate')%>
+
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card mb-3 ">
+                <div class="card-body border border-dark rounded">
+                    <h5 class="card-title d-flex justify-content-center">
+                        Volunteer Details
+                    </h5>
+                </div>
+                <ul class="list-group list-group-flush border border-dark rounded">
+                    <li class="list-group-item border-dark">Name:  <%=volunteer.name%>
+                    </li>
+                    <li class="list-group-item border-dark">Email:  <%=volunteer.email%>
+                    </li>
+                    <li class="list-group-item border-dark">Phone no: <%=volunteer.phone%>
+                    </li>
+                    <li class="list-group-item border-dark">Gender: <%=volunteer.gender%>
+                    </li>
+                    <li class="list-group-item border-dark">City: <%=volunteer.city%>
+                    </li>
+                    <li class="list-group-item border-dark">State: <%=volunteer.state%></li>
+                    <li class="list-group-item border-dark">Occupation: <%=volunteer.occupation%>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="row mb-5">
+        <div class="col-6 offset-3">
+            <div class="d-flex justify-content-center">
+                <a class="card-link btn btn-info me-2" href="/volunteer/<%=volunteer._id%>/edit">Edit</a>
+                <form class="d-inline" action="/volunteer/<%=volunteer._id%>?_method=DELETE" method="POST">
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+            </div>       
+        </div>
+    </div>

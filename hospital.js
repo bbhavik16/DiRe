@@ -1,4 +1,4 @@
-let hospitals=[
+module.exports.hospital=[
  {
   State: "Andhra Pradesh",
   City: "Visakhapatnam",
