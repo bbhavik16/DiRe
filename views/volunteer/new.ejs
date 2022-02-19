@@ -1,94 +1,136 @@
 <% layout('layouts/boilerplate')%>
 
+<style>
+  body {
+      background-image: url(" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTffCsYV1IqQvzQe-y6ZHC9ZMXIh2YyuPZiiA&usqp=CAU");
+      background-size: cover;
+      background-position: center;
+  }
+</style>
+<script>
+
+  const main = document.getElementsByClassName("container mt-5 mb-0");
+  main[0].setAttribute("class", "px-3");
+</script>
+
 <div class='row'>
-    <h1 class="text-center">New Volunteer</h1>
-    <div class="col-6 offset-3">
-    <form  action="/volunteer" method="post" novalidate class="row g-3 validated-form">
-      <div class="mb-3">
-          <label for="name" class="form-label">Name</label>
-          <input type="text" class="form-control" id="name" placeholder="Enter name" name="volunteer[name]" required>
-      </div>
-      <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="Enter email" name="volunteer[email]" required>
-      </div>
-      <div class="mb-3">
-          <label for="phone" class="form-label">Contact No.</label>
-          <input type="number" class="form-control" id="phone" placeholder="Enter contact no." name="volunteer[phone]" required>
-      </div>
-      <div class="mb-3">
-          <label for="gender" class="mb-2">Gender</label>
-          <div>
-            <input type="radio" class="form-check-input" id="male" name="volunteer[gender]" value="Male">
-            <label for="male">Male</label>
+  <h1 class="text-center mb-3">New Volunteer</h1>
+  <div class="col-12 ">
+    <form action="/volunteer" method="post" novalidate class="row g-3 validated-form">
+          <div class="tab col-12">
+              <div class="row">
+                  <div class="col-4">
+                      <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter name" name="volunteer[name]" required>
+                      </div>
+                  </div>
+                  <div class="col-4">
+                      <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="volunteer[email]" required>
+                      </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="mb-3">
+                      <label for="phone" class="form-label">Contact No.</label>
+                      <input type="number" class="form-control" id="phone" placeholder="Enter contact no." name="volunteer[phone]" required> 
+                    </div>
+                </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-4">
+                      <div class="mb-3">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" class="form-control" id="city" placeholder="Enter city" name="volunteer[city]" required>
+                      </div>
+                  </div>
+                  <div class="col-4">
+                      <div class="mb-3">
+                        <label for="dob" class="form-label">DOB</label>
+                        <input type="date" class="form-control" id="dob" placeholder="Enter DOB" name="volunteer[dob]">
+                      </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="mb-3">
+                      <label for="state" class="form-label">State</label>
+                      <input type="text" class="form-control" id="state" placeholder="Enter state" name="volunteer[state]" required>
+                    </div>
+                </div>
+              </div>
+
+
+              <div class="row">
+                  <div class="col-4">
+                      <div class="mb-3">
+                        <label for="gender" class="mb-2">Gender</label>
+              <div>
+                <input type="radio" class="form-check-input" id="male" name="volunteer[gender]" value="Male">
+                <label for="male">Male</label>
+              </div>
+              <div>
+                <input type="radio" class="form-check-input" id="female" name="volunteer[gender]" value="Female">
+                <label for="female">Female</label>
+              </div>
+              <div>
+                <input type="radio" class="form-check-input" id="other" name="volunteer[gender]" value="Other">
+                <label for="other">Other</label>
+              </div>
+                      </div>
+                  </div>
+                  <div class="col-4">
+                      <div class="mb-3">
+                        <label for="occupation" class="form-label">Occupation</label>
+                        <div>
+                          <input type="radio" class="form-check-input" id="student" name="volunteer[occupation]" value="Student">
+                          <label class="form-check-label" for="student">Student</label>
+                        </div>
+                        <div>
+                          <input type="radio" class="form-check-input" id="employed" name="volunteer[occupation]" value="Employed">
+                          <label class="form-check-label" for="employed">Employed</label>
+                        </div>
+                        <div>
+                          <input type="radio" class="form-check-input" id="unemployed" name="volunteer[occupation]" value="Unemployed">
+                          <label  class="form-check-label" for="unemployed">Unemployed</label>
+                        </div>
+                        <div>
+                          <input type="radio" class="form-check-input" id="other" name="volunteer[occupation]" value="Other">
+                          <label  class="form-check-label" for="other">Other</label>
+                        </div>         
+                      </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="mb-3">
+                      <label for="fieldInterest" class="mb-2">Field of Interest</label>
+          
+                  <div>
+                    <input type="checkbox" class="form-check-input" id="content_writing" name="volunteer[fieldInterest]" value="Content Writing">
+                    <label class="form-check-label" for="content_writing">Content Writing</label>
+                  </div>
+                
+                  <div>
+                    <input type="checkbox" class="form-check-input" id="fund_raising" name="volunteer[fieldInterest]" value="Fund Raising">
+                    <label class="form-check-label" class="form-check-label" for="fund_raising">Fund Raising</label>
+                  </div>
+                
+                  <div>
+                    <input type="checkbox" class="form-check-input" id="field_work" name="volunteer[fieldInterest]" value="Field Work">
+                    <label class="form-check-label" for="field_work">Field Work</label>
+                  </div>
+                
+                  <div>
+                    <input type="checkbox" class="form-check-input" id="disaster_relief" name="volunteer[fieldInterest]" value="Disaster Relief">
+                    <label class="form-check-label" for="disaster_relief">Disaster Relief</label>
+                  </div>
+                    </div>
+                </div>
+              </div>
           </div>
-          <div>
-            <input type="radio" class="form-check-input" id="female" name="volunteer[gender]" value="Female">
-            <label for="female">Female</label>
-          </div>
-          <div>
-            <input type="radio" class="form-check-input" id="other" name="volunteer[gender]" value="Other">
-            <label for="other">Other</label>
-          </div>
-         
-      </div>
-      <div class="mb-3">
-          <label for="dob" class="form-label">DOB</label>
-          <input type="date" class="form-control" id="dob" placeholder="Enter DOB" name="volunteer[dob]">
-      </div>
-      <div class="mb-3">
-          <label for="occupation" class="form-label">Occupation</label>
-          <div>
-            <input type="radio" class="form-check-input" id="student" name="volunteer[occupation]" value="Student">
-            <label class="form-check-label" for="student">Student</label>
-          </div>
-          <div>
-            <input type="radio" class="form-check-input" id="employed" name="volunteer[occupation]" value="Employed">
-            <label class="form-check-label" for="employed">Employed</label>
-          </div>
-          <div>
-            <input type="radio" class="form-check-input" id="unemployed" name="volunteer[occupation]" value="Unemployed">
-            <label  class="form-check-label" for="unemployed">Unemployed</label>
-          </div>
-          <div>
-            <input type="radio" class="form-check-input" id="other" name="volunteer[occupation]" value="Other">
-            <label  class="form-check-label" for="other">Other</label>
-          </div>         
-      </div>
-      <div class="mb-3">
-          <label for="city" class="form-label">City</label>
-          <input type="text" class="form-control" id="city" placeholder="Enter city" name="volunteer[city]" required>
-      </div>
-      <div class="mb-3">
-          <label for="state" class="form-label">State</label>
-          <input type="text" class="form-control" id="state" placeholder="Enter state" name="volunteer[state]" required>
-      </div>
-      <div class="mb-3">
-          <label for="fieldInterest" class="mb-2">Field of Interest</label>
-      
-          <div>
-            <input type="checkbox" class="form-check-input" id="content_writing" name="volunteer[fieldInterest]" value="Content Writing">
-            <label class="form-check-label" for="content_writing">Content Writing</label>
-          </div>
-         
-          <div>
-            <input type="checkbox" class="form-check-input" id="fund_raising" name="volunteer[fieldInterest]" value="Fund Raising">
-            <label class="form-check-label" class="form-check-label" for="fund_raising">Fund Raising</label>
-          </div>
-         
-          <div>
-            <input type="checkbox" class="form-check-input" id="field_work" name="volunteer[fieldInterest]" value="Field Work">
-            <label class="form-check-label" for="field_work">Field Work</label>
-          </div>
-         
-          <div>
-            <input type="checkbox" class="form-check-input" id="disaster_relief" name="volunteer[fieldInterest]" value="Disaster Relief">
-            <label class="form-check-label" for="disaster_relief">Disaster Relief</label>
-          </div>
-      </div>
-      <div class="d-flex justify-content-center mb-5">
-          <button class="btn btn-success">Add Volunteer</button> 
-      </div>    
-    </form>
-</div>
+          <div class="d-flex justify-content-center">
+            <button class="btn btn-success">Add Volunteer</button> 
+        </div>   
+
+      </form>
+  </div>
 </div>

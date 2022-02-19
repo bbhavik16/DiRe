@@ -1,4 +1,4 @@
-.carousel .item {
+ .carousel .item {
     height: 500px;
     position: relative;
     width:100%;
@@ -36,3 +36,72 @@
     padding: 1.5%;
     border-radius: 25px;
   } 
+
+  .light-wrapper {
+	background: #f9f9f9;
+    border-bottom: 1px solid rgba(0,0,0,0.1)
+} 
+
+
+
+.statistic-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background: #00c6ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+    background: linear-gradient(to right, #0072ff, #00c6ff); 
+}
+
+.count-title {
+   font-size: 50px;
+   font-weight: normal;
+   margin-top: 10px;
+   margin-bottom: 0;
+     text-align: center;
+     font-weight: bold;
+   color: #fff;
+}
+
+.stats-text {
+   font-size: 15px;
+   font-weight: normal;
+   margin-top: 15px;
+   margin-bottom: 0;
+   text-align: center;
+     color: #fff;
+     text-transform: uppercase;
+     font-weight: bold;
+}
+
+.stats-line-black {
+   margin: 12px auto 0;
+   width: 55px;
+   height: 2px;
+   background-color: #fff;
+}
+.stats-icon {
+     font-size: 35px;
+     margin: 0 auto;
+   float: none;
+   display: table;
+   color: #fff;
+}
+
+@media (max-width: 992px) {
+   .counter {
+       margin-bottom: 40px;
+   }
+}
+
+#Reach{       /* 3D Effect for Our Reach & Impact */
+    margin: 1em 0 0.5em 0;
+    color: #343434;
+    font-weight: normal;
+    font-family: 'Ultra', sans-serif;   
+    font-size: 36px;
+    line-height: 42px;
+    /* text-transform: uppercase; */
+    text-shadow: 0 2px white, 0 3px #777;
+  }
+
+

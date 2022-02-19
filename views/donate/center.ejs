@@ -1,1 +1,36 @@
 <% layout('layouts/boilerplate')%>
+    <style>
+        body {
+            background-image: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .3)), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeJGFRCP6QfsLkoReRju0ob1UkqtyBWO6f5A&usqp=CAU");
+            background-color: #b1aeae;
+            background-size: cover;
+            background-repeat: repeat-y;
+        }
+    </style>
+    <div class="row d-flex justify-content-center">
+        <div class=" col-8">
+            <div class="card d-flex justify-content-center mb-3" style="max-width: 18 rem;">
+                <h1 class="d-flex justify-content-center mb-3">AVAILABLE CENTERS NEAR YOU</h1>
+            </div>
+        </div>
+    </div>
+    <% for(let i=0; i<found.length; i++){ %>
+        <div class="row mt-3 mb-3 d-flex justify-content-center">
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= found[i].Hospital_Name %>
+                        </h5>
+                        <p class="card-text">Address:<%= found[i].Address %>
+                        </p>
+                        <p class="card-text">Phone Number:<%= found[i].Phone_No %>
+                        </p>
+                        <p class="card-text">Email:<%= found[i].Email %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="map"></div>
+        <% } %>

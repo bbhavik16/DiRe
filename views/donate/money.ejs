@@ -1,33 +1,41 @@
 <% layout('layouts/boilerplate')%>
-  
-    <div class="row my-5">
-      <div class="col-md-4 offset-md-4">
-        <div class="card">
-          <div class="card-body">
-            <form class="" action="/paynow" method="post">
-              <div class="mb-3">
-                <label for="name" class="form-label">Name: </label>
-                <input class="form-control" type="text" id="name" name="name" value="">
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email :</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" name="email" value="">
-              </div>
-              <div class="mb-3">
-                <label for="phone" class="form-label">Phone: </label>
-                <input class="form-control" type="text" id="phone" name="phone" value="">
-              </div>
-             <div class="mb-3">
-                <label for="amount">Amount: </label>
-                <input class="form-control" type="text" name="amount" value="">
-              </div>
-                <button class="btn  btn-primary">Pay Now</button>
-            </form>
-          </div>
+  <style>
+    body {
+      background-image: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .3)), url("https://www.signupgenius.com/cms/images/nonprofit/disaster-relief-ideas-article-600x400.jpg");
+      background-color: #b1aeae;
+      background-size: cover;
+    }
+  </style>
+  <h1 class="text-dark">Your generosity makes a transformative and lifelong impact. When you give, you’ll join our
+    family of passionate changemakers committed to changing our world.</h1>
+  <div class="row my-5">
+    <div class="col-md-4 offset-md-4">
+      <div class="card">
+        <div class="card-body">
+
+          <form class="" action="/paynow" method="post">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name: </label>
+              <input class="form-control" type="text" id="name" name="name" value="">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email :</label>
+              <input type="email" class="form-control" id="email" aria-describedby="email" name="email" value="">
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone: </label>
+              <input class="form-control" type="text" id="phone" name="phone" value="">
+            </div>
+            <div class="mb-3">
+              <label for="amount">Amount: </label>
+              <input class="form-control" type="text" name="amount" value="">
+            </div>
+            <div class="text-center">
+              <button class="btn  btn-primary">Pay Now</button>
+            </div>
+
+          </form>
         </div>
       </div>
     </div>
-  
-
-
-   
+  </div>

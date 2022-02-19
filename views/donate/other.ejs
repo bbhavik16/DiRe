@@ -1,43 +1,66 @@
 <% layout('layouts/boilerplate')%>
-    <form action="" method="post" class="row g-3 validated-form">
-        <div class="mb-3 col-8">
-            <label for="Name" class="form-label"> Name</label>
-            <input type="text" class="form-control" id="Name" placeholder="Enter name" name="util[name]" required>
+    <style>
+        body {
+            background-image: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .3)), url("https://i0.wp.com/zeevector.com/wp-content/uploads/2021/03/Light-color-brochure-background-free-download-scaled.jpg?fit=1811%2C2560&ssl=1");
+            background-color: #b1aeae;
+            background-size: cover;
+        }
+    </style>
+    <div class="row d-flex justify-content-center mb-5">
+        <div class="col-6">
+            <div class="card">
+                <form action="/donate/other" method="post" class="row g-3 ps-4 pt-4 validated-form">
+                    <div class="mb-3 col-8">
+                        <label for="Name" class="form-label"> Name</label>
+                        <input type="text" class="form-control" id="Name" placeholder="Enter name" name="util[name]"
+                            required>
+                    </div>
+                    <div class="mb-3 col-8">
+                        <label for="Email1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="Email1" aria-describedby="emailHelp"
+                            name="util[email]">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3 col-8">
+                        <label for="Phone" class="form-label">Phone Number:</label>
+                        <input type="tel" class="form-control" id="Phone" pattern="[0-9]{10}" name="util[phnumber]">
+                    </div>
+                    <div class="mb-3 col-8">
+                        <label for="City" class="form-label">City</label>
+                        <input type="text" class="form-control" id="City" placeholder="Enter City" name="util[city]"
+                            required>
+                    </div>
+                    <div class="mb-3 col-8">
+                        <label for="Pincode" class="form-label">Pincode:</label>
+                        <input type="tel" class="form-control" id="Pincode" pattern="[0-9]{6}" name="util[pincode]">
+                    </div>
+                    <div class="form-check mb-3 ms-2">
+                        <input class="form-check-input" type="checkbox" value="Food" name="option[]"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Food
+                        </label>
+                    </div>
+                    <div class="form-check mb-3 ms-2">
+                        <input class="form-check-input" type="checkbox" value="Clothing" name="option[]"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Clothing
+                        </label>
+                    </div>
+                    <div class="mb-3 col-8">
+                        <label for="Other" class="form-label"> Other</label>
+                        <input type="text" class="form-control" id="Other" placeholder="Others" name="util[other]"
+                            required>
+                    </div>
+                    <div class="d-flex justify-content-center mb-5">
+                        <button class="btn btn-success">Add Donation</button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="mb-3 col-8">
-            <label for="Email1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="Email1" aria-describedby="emailHelp" name="util[email]">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        <div class="col-6 d-flex mb-5 ">
+            <img class="rounded"
+                src="https://res.cloudinary.com/djhcnbsvg/image/upload/c_scale,h_800,w_600/v1645265336/larm-rmah-AEaTUnvneik-unsplash_xbeinv.jpg">
         </div>
-        <div class="mb-3 col-8">
-            <label for="Phone" class="form-label">Phone Number:</label>
-            <input type="tel" class="form-control" id="Phone" pattern="[0-9]{10}" name="util[phnumber]">
-        </div>
-        <div class="mb-3 col-8">
-            <label for="City" class="form-label">City</label>
-            <input type="text" class="form-control" id="City" placeholder="Enter City" name="util[city]" required>
-        </div>
-        <div class="mb-3 col-8">
-            <label for="Pincode" class="form-label">Pincode:</label>
-            <input type="tel" class="form-control" id="Pincode" pattern="[0-9]{6}" name="util[pincode]">
-        </div>
-        <div class="form-check mb-3 ms-2">
-            <input class="form-check-input" type="checkbox" value="Food" name="option[]" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault" >
-                Food
-            </label>
-        </div>
-        <div class="form-check mb-3 ms-2">
-            <input class="form-check-input" type="checkbox" value="Clothing" name="option[]" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault" >
-               Clothing
-            </label>
-        </div>
-        <div class="mb-3 col-8">
-            <label for="Other" class="form-label"> Other</label>
-            <input type="text" class="form-control" id="Other" placeholder="Others" name="util[other]" required>
-        </div>
-        <div class="d-flex justify-content-center mb-5">
-            <button class="btn btn-success">Add Donation</button> 
-          </div>    
-    </form>
+    </div>

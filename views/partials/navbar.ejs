@@ -1,88 +1,49 @@
-<!-- <link rel="stylesheet" href="../css/navbar.css">
-
-    <nav class="navbar">
-        <div class="container nav-wrapper">
-        
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-list">
-                <li class="active">
-                    <a  href="#"> 
-                        <button class="btn">Home</button>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <button class="btn">Product</button>
-                     </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <button class="btn">Reviews</button>
-                     </a>
-                </li>
-                <li>
-                    <button class="btn">Contact Us</button>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-
-
-<script src="../javascript/navbar.js"></script> -->
-
 <style>
-    .nav-link {
-      padding: 0.25rem 0;
-      font-weight: 700;
-      color: rgba(12, 11, 11, 0.5);
-      margin-left: 1rem;
-      border-bottom: 0.25rem solid transparent;
-    }
-    
-    .nav-link:hover{
-      border-bottom-color:rgba(255,255,255,0.5);
-    }
-  </style>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <div class="navbar-nav">
-    
-            <a class="nav-link" aria-current="page" href="/home">Home</a>
-            <a class="nav-link " href="/students">Students</a>
-            <a class="nav-link " href="/companies">Companies</a>
-            <li class="nav-item dropdown">
-              <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Statistics
-              </a> 
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="/statistics/2019-20">2019-20</a></li>
-                <li><a class="dropdown-item" href="/statistics/2018-19">2018-19</a></li>
-                <li><a class="dropdown-item" href="/statistics/2017-18">2017-18</a></li>
-                <li><a class="dropdown-item" href="/statistics/2016-17">2016-17</a></li>
-                <li><a class="dropdown-item" href="/statistics/2015-16">2015-16</a></li>
-              </ul>
-            </li>
-            <a class="nav-link" href="/events">Events</a>
-            <a class="nav-link " href="/contact">Contact Us</a>
-          </div>
-          
-        </div>
+  .nav-link {
+    padding: 0.25rem 0;
+    font-weight: 700;
+    color: rgba(12, 11, 11, 0.5);
+    margin-left: 1rem;
+    border-bottom: 0.25rem solid transparent;
+  }
+
+  .nav-link:hover {
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+  }
+</style>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img
+      src="https://res.cloudinary.com/djhcnbsvg/image/upload/c_scale,h_50,w_75/v1645264346/WhatsApp_Image_2022-02-19_at_2.49.00_PM_kwlneo.jpg">
+  </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav">
+        <div style="color:white; font-size:22px; "><b>Di</b>saster <b>Re</b>lief</div>
+        <a class="nav-link" aria-current="page" href="/">Home</a>
+        <a class="nav-link " href="/volunteer">Volunteer</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Donate
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/donate/money">Money</a></li>
+            <li><a class="dropdown-item" href="/donate/other">Utilities</a></li>
+          </ul>
+        </li>
       </div>
-    </nav>  
-  
-  
-  
-  
-  
-  
+      <div class="navbar-nav ms-auto"> 
+        <%if(!currentUser){ %> 
+          <a class="nav-link" href="/volunteer/login">Login</a>
+          <a class="nav-link" href="/volunteer/register">Register</a>
+        <%} else{ %> 
+          <a class="nav-link" href="/volunteer/logout">Logout</a>
+        <% } %> 
+       </div>
+    </div>
+  </div>
+</nav>

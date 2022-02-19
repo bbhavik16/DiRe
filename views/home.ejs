@@ -1,364 +1,192 @@
 <% layout('layouts/boilerplate')%>
-   
-<link rel="shortcut icon" href="images/favicon.png">
-<title>Rapid Response | India’s most trusted Disaster Relief NGO</title>
-
-<link rel="canonical" href="http://www.rapidresponse.org.in">
-
-
-<link href="style/css/bootstrap.min.css" rel="stylesheet">
-<link href="style/css/plugins.css" rel="stylesheet">
-<link href="style.css" rel="stylesheet">
-<link href="style/css/color/green.css" rel="stylesheet">
-<!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&display=swap" rel="stylesheet">
-<link href="style/type/icons.css" rel="stylesheet">
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-42945824-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-42945824-1');
-</script>
-</head>
-<body>
-<div id="preloader"><div id="status"><div class="spinner"></div></div></div>
-<div class="body-wrapper">
-  <nav class="navbar navbar-default default">
-    <div class="container">
-      <div class="navbar-header">
-        <div class="basic-wrapper"> 
-			<a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
-        <div class="navbar-brand">
-<img src="images/logo.png" alt="Rapid Response" style="width:258px;height:91px;">
-        </div>
-          <!-- /.navbar-brand -->
-        </div>
-        <!-- /.basic-wrapper --> 
-      </div>
-      <!-- /.navbar-header -->
-      <div class="collapse navbar-collapse">
-         <ul class="nav navbar-nav">
-           <li><a href="index.html" >Home <span class="caret"></span></a>
-          </li>
-          <li><a href="about-us.html" >About Us <span class="caret"></span></a>
-          </li>
-          <li><a href="projects.html">Projects<span class="caret"></span></a>
-          </li>
-          <li><a href="partnerships.html" >Partnerships<span class="caret"></span></a>
-          </li>
-		   <li><a href="volunteer.html" >Volunteer<span class="caret"></span></a>
-          </li>
-           <li class="current1 dropdown"><a href="coronavirusrelief.html" >COVID-19<span class="caret"></span></a>
-          </li>
-          <li class="dropdown menu_btn"><div class="tp-caption sfb start centr_btn" data-x="center" data-y="420" data-speed="900" data-start="2200" data-easing="Sine.easeOut" data-endspeed="100"><a href="donate.php" class="btn btn-large">Donate</a></div>
-          </li>
-        </ul>
-        <!-- /.navbar-nav --> 
-      </div>
-      <!-- /.navbar-collapse --> 
-    </div>
-    <!-- /.container --> 
-  </nav>
-  <!-- /.navbar -->
-  <div class="tp-fullscreen-container revolution">
-    <div class="tp-fullscreen">
-      <ul>
-       <li data-transition="fade"> <img src="images/slider/bg12.jpg"  alt="Covid19 Relief India" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
-          <div class="tp-caption large sfb text-center" data-x="center" data-y="263" data-speed="900" data-start="800" data-easing="Sine.easeOut">Its time to rise together for India</div>
-          <div class="tp-caption medium sfb text-center" data-x="center" data-y="348" data-speed="900" data-start="1500" data-easing="Sine.easeOut">COVID19 EMERGENCY RELIEF</div>
-          <div class="tp-caption sfb" data-x="center" data-y="420" data-speed="900" data-start="2200" data-easing="Sine.easeOut"  data-endspeed="100"><a href="donate.php" class="btn btn-large btn-border">Donate Now</a></div>
-        </li> 
-              <!-- <li data-transition="fade"> <img src="images/slider/bg1a.jpg"  alt="Nivar Cyclone Relief" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
-        <div class="tp-caption large sfb text-center" data-x="center" data-y="263" data-speed="900" data-start="800" data-easing="Sine.easeOut">Tamil Nadu Flood Relief</div>
-          <div class="tp-caption medium sfb text-center" data-x="center" data-y="348" data-speed="900" data-start="1500" data-easing="Sine.easeOut">Help Us to Help the Affected Families</div>
-          <div class="tp-caption sfb" data-x="center" data-y="420" data-speed="900" data-start="2200" data-easing="Sine.easeOut"  data-endspeed="100"><a href="donate.php" class="btn btn-large btn-border">Donate Now</a></div>
-        </li>-->
-      </ul>
-      <div class="tp-bannertimer tp-bottom"></div>
-    </div>
-    <!-- /.tp-fullscreen-container --> 
-  </div>
-  <!-- /.revolution -->
-  <div class="color-wrapper inverse-wrapper green-bg master_support">
-    <div class="container inner">
-      <div class="thin">
-	  <div class="col-md-9">
-	       <h3>COVID19 EMERGENCY RELIEF - We have been rigorously responding to the crisis, reaching out to the most affected families. Your generous contribution can make a difference. Please join us.</h3>
-         <!--  <h3>In the face of a crisis often the difference between life and death is immediate access to relief items. We are a pioneer in delivering life saving relief supplies on time at scale. Help us to do more.</h3>-->
-		</div>       
-		<div class="col-md-3">
-			 <div class="divide10"></div>
-			 <a href="donate.php" class="btn btn-border bm0 text-center">Support Our Work</a> 
-		</div>       
-		</div>
-      <!-- /.thin --> 
-    </div>
-    <!-- /.container --> 
-  </div>
-  <div class="light-wrapper">
-    <div class=" inner sec-one">
-      <div class="headline text-center">
-        <h2>Welcome to Rapid Response </h2> <h2 style="color: #8c8989;">India’s premier agency for Disaster Response</h2>
-		<br>
-		<p class="lead">Rapid Response is an award winning organisation, providing disaster response & preparedness services across India. As a disaster relief agency, we help people to survive and rebuild their lives through food, medical, education, shelter and livelihood programs. Our most recent interventions in Maharashtra, Karnataka and Assam have impacted thousands of lives!</p>
-      </div>
-  </div>
-  <!-- /.light-wrapper -->
-  <!-- /.inverse-wrapper -->
-  <div class="light-wrapper">
-    <div class="container inner sec-two">
-      <div class="section-title text-center">
-        <h1>Current Appeals</h1>
-      </div>
-       <div class="row">
-           
-    <div class="col-sm-4">
-		 <figure>
-        	<img src="images/slider/post1c.jpg" alt="Covid-19 Relief" />
-        </figure>
-		 <div class="divide20"></div>
-          <h3><a href="coronavirusrelief.html">PROVIDING DRY RATION TO COVID HIT COMMUNITIES ACROSS INDIA. Read More…</a></h3>
-          <div class="divide20"></div>
-        </div>
-           
-    <div class="col-sm-4">
-		 <figure>
-        	<img src="images/slider/post1b.jpg" alt="Covid-19 Relief" />
-        </figure>
-		 <div class="divide20"></div>
-          <h3><a href="coronavirusrelief.html">PROVIDING HEALTHCARE SUPPLIES TO HOSPITALS & COVID CARE CENTERS. Read More…</a></h3>
-         <div class="divide20"></div>
-         </div>
-         
-         <div class="col-sm-4">
-		 <figure>
-        	<img src="images/slider/post1a.jpg" alt="Covid-19 Relief" />
-        </figure>
-		 <div class="divide20"></div>
-          <h3><a href="coronavirusrelief.html">Awareness campaign on Covid appropriate behaviour. Read More…</a></h3>    
-        </div>
-           
-       
-      </div>
-    </div>
-    <!-- /.container --> 
-  </div>
-  <!-- /.light-wrapper -->
-  <div class="light-wrapper">
-    <div class="container inner">
-      <div class="section-title text-center">
-        <h1>Facts & Figures </h1>
-      </div>
-      <div class="thin3">
-        <div class="row circle-wrapper">
-          <div class="col-sm-6 col-md-3">
-            <div class="circle blue-bg">
-              <div class="text"> 24 hours <p>Time which relief delivered, from appeal to assistance</p></div>
-            </div>
-          </div>
-          <!-- /column -->
-          <div class="col-sm-6 col-md-3">
-            <div class="circle red-bg">
-              <div class="text">26<p>Disaster Relief Operations Executed </p></div>
-            </div>
-          </div>
-          <!-- /column -->
-          <div class="col-sm-6 col-md-3">
-            <div class="circle green-bg">
-              <div class="text">8<p>Disaster Preparedness Projects Implemented</p></div>
-            </div>
-          </div>
-		  <!-- /column -->
-		  <div class="col-sm-6 col-md-3">
-            <div class="circle yellow-bg">
-              <div class="text">7 lakh<p> Lives Impacted</p></div> 
-            </div>
-          </div>
-          <!-- /column --> 
-        </div>
-        <!--/.row -->
-        <div class="divide30"></div>
-      </div>
-      <!--/.thin --> 
-    </div>
-    <!--/.container --> 
-  </div>
-  <!-- /.light-wrapper -->
-  <div class="container inner text-center facts ">
-		<div class="section-title text-center relk">
-			<h1>Our Impact</h1>
-		</div>
-        <div class="col-sm-2">
-          <div class="icon-large"> <img src="images/icons/foodpacket.png" style="width: 80px;" alt="Free Food Distribution"></div>
-          <h2>2,14,000+</h2>
-          <p class="rel_p">Food Packets (Meals)</p>
-        </div>
-        <!--/column -->
-        <div class="col-sm-2">
-          <div class="icon-large"> <img src="images/icons/reliefkit.png" style="width: 80px;" alt="Relief Kit"></div>
-          <h2>42,600</h2>
-          <p class="rel_p">Relief Kits (Dry Ration)</p>
-        </div>
-        <!--/column -->
-		<div class="col-sm-2">
-          <div class="icon-large"> <img src="images/icons/bedkit.png" style="width: 80px;" alt="Bed Kit"></div>
-          <h2>9,800</h2>
-          <p class="rel_p">Bed Kits (Sleeping Mat & Blanket)</p>
-        </div>
-        <div class="col-sm-2">
-          <div class="icon-large"> <img src="images/icons/educationkit.png" style="width: 80px;" alt="Education Kit"></div>
-          <h2>6,500</h2>
-          <p class="rel_p">Education Kits (Bag & Notebooks)</p>
-        </div>
-        <!--/column -->
-        <div class="col-sm-2">
-          <div class="icon-large"> <img src="images/icons/medicalcamp.png" style="width: 80px;" alt="Medical Camp"></div>
-          <h2>144</h2>
-          <p class="rel_p">Medical <br> Camps</p>
-        </div>
-	    <div class="col-sm-2">
-          <div class="icon-large"> <img src="images/icons/reliefkit.png" style="width: 80px;" alt="Hygiene Kit"></div>
-          <h2>23,400</h2>
-          <p class="rel_p">Hygiene Kits (Hygiene Items)</p>
-        </div>
-        <!--/column -->
-        <!--/column --> 
-    </div>
-  <div class="parallax parallax2 inverse-wrapper customers">
-    <div class="container inner section-title ">
-      <div class="text-center thin2">
-          <h3>Thank you for being part of our journey in 2020</h3><br>
-<div class="tp-caption sfb start centr_btn" data-x="center" data-y="420" data-speed="900" data-start="2200" data-easing="Sine.easeOut" data-endspeed="100" ><a href="https://myalbum.com/album/YTJYAgzh5rpR" target="_blank" class="btn btn-large">View highlights</a></div>
-        </div>
-      <!-- /.testimonials --> 
-    </div>
-    <!-- /.container --> 
-  </div>
-  <!-- /-wrapper -->
-  <div class="parallax color-wrapper inverse-wrapper green-bg">
-    <div class="container inner text-center ">
-      <div class="thin section-title">
-        <h3>Partnerships</h3>
-		<br>
-		<p class="lead"><b>Partners play an important role in adding to Rapid Response’s resource capacity and network. They also help us get better at what
-we do. </b></p><br>
-	    <div class="divide10"></div>
-			 <a href="partnerships.html" class="btn btn-border bm0 text-center">Be Our Partner</a> 
-		</div>
-      <!-- /.thin --> 
-    </div>
-    <!-- /.container --> 
-  </div>
-  <!-- /-wrapper -->
-  <div class="parallax parallax2 inverse-wrapper customers">
-    <div class="container inner section-title ">
-        <div class="text-center thin2">
-          <h3>VOLUNTEERS | JOIN US<br><br>WE ARE BUILDING A NETWORK OF 5000 COMMITTED VOLUNTEERS FOR DISASTER RELIEF AND RECOVERY EFFORTS ACROSS INDIA.</h3><br>
-<div class="tp-caption sfb start centr_btn" data-x="center" data-y="420" data-speed="900" data-start="2200" data-easing="Sine.easeOut" data-endspeed="100" ><a href="https://forms.gle/ny6jHxDA1YE1qHo39" target="_blank" class="btn btn-large">Register Now</a></div>
-        </div>
-      <!-- /.testimonials --> 
-    </div>
-    <!-- /.container --> 
-  </div>
- <!--  new section -->
- <div class="parallax color-wrapper inverse-wrapper green-bg">
-    <div class="container inner text-center ">
-      <div class="thin section-title">
-        <h3>"RAPID RESPONSE is an N/Core Alpha Winner, recognized as one of the most promising non profits in India and rated as one of the 20 non profits solving India's greatest challenges!"</h3><br><br>
-		</div>
-      <!-- /.thin --> 
-    </div>
-    <!-- /.container --> 
-  </div>
- <!--  new section -->
-  <footer class="inverse-wrapper">
-    <div class="container inner">
+    <link rel="stylesheet" href="../css/home.css">
+    <div class="ml-0 mr-0">
       <div class="row">
-        <div class="col-sm-4">
-          <div class="widget"> 
-			<h4 class="widget-title">KNOW MORE</h4>
-			 <ul class="circled max_half">
-			  <li><a href="whatwedo.html">What We Do</a></li>
-              <li><a href="our-journey.html">Our Journey</a></li>
-              <li><a href="leadership-team.html">Leadership Team</a></li>
-              <li><a href="images/slider/relief-manual.pdf" target="_blank">Relief Manual</a></li>
-			  <li><a href="images/slider/agency-mandate.pdf" target="_blank">Agency Mandate</a></li>
-             </ul>
-			 <ul class="circled max_half">
-			  <li><a href="coronavirusrelief.html">COVID19 Relief</a></li>
-			  <li><a href="assam-floods.html">Assam Floods</a></li>
-			  <li><a href="seedballs-project.html">Seed Balls Project</a></li>
-              <li><a href="donate.php">Donate Now</a></li>
-              <li><a href="contact-us.html">Contact Us</a></li>
-	         </ul>
-          </div>
-          <!-- /.widget --> 
-        </div>
-        <!-- /column -->
-        <div class="col-sm-4">
-          <div class="widget">
-            <h3 class="section-title widget-title">Did you Know?</h3>
-             <ul class="post-list">
-              <li>
-                <h6>Rapid Response is the First Disaster Relief NGO in India!</h6></li>
-              <li>
-                <h6>Rapid Response responds to major disasters within 24 hours of the event!</h6> </li>
-              <li>
-                <h6>All donations to Rapid Response are 50% tax exempt under sec 80G.</h6> </li>
-            </ul>
-            <!-- /.post-list --> 
-          </div>
-          <!-- /.widget --> 
-        </div>
-               <!-- /column -->
-         <div class="col-sm-4">
-          <div class="widget">
-            <h3 class="section-title widget-title">Get In Touch</h3>
-            <p>For all enquiries regarding volunteering, fundraising and arranging local events, please contact: </p>
-            <div class="contact-info"> 
-              <i class="icon-mail"></i> info@rapidresponse.org.in</div><br>
-	  <ul class="social">
-            <li><a href="https://www.facebook.com/RapidResponseIndia" target="_blank"><i class="icon-s-facebook"></i></a></li>
-            <li><a href="https://www.instagram.com/rapidresponseindia" target="_blank"><i class="icon-s-instagram"></i></a></li>
-            <li><a href="https://twitter.com/RapidResponse" target="_blank"><i class="icon-s-twitter"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/rapidresponse" target="_blank"><i class="icon-s-linkedin"></i></a></li>
-            <li><a href="https://www.youtube.com/user/rapidresponseindia" target="_blank" ><i class="icon-s-youtube"></i></a></li>
-          </ul>	  
-                    </div>
-        </div>
-        <!-- /column -->
-        <!-- /column --> 
-        
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                      class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                      aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                      aria-label="Slide 3"></button>
               </div>
-      <!-- /.row -->
-      
-      <hr />
-	  <p class="footer-menu pull-right"></p>
-      <p class="copyright pull-left">Copyright 2021 - Rapid Response. All Rights Reserved.</p>
-	  <p class="footer-menu pull-right"><a href="images/slider/privacy.pdf" target="_blank">Privacy Policy</a> | <a href="images/slider/terms.pdf" target="_blank">Terms & Conditions</a></p>   
-    </div>
-    <!-- .container --> 
-  </footer>
-  <!-- /footer -->
-  <div id="share-bar"></div>
-</div>
-<!--/.body-wrapper --> 
-<script src="style/js/jquery.min.js"></script> 
-<script src="style/js/bootstrap.min.js"></script> 
-<script src="style/js/plugins.js"></script> 
-<script src="style/js/jquery.themepunch.tools.min.js"></script> 
-<script src="style/js/scripts.js"></script>
-<!-- DEMO ONLY -->
+              <div class="carousel-inner">
+                  <div class="carousel-item item active">
+                      <img src="https://borgenproject.org/wp-content/uploads/ways-natural-disasters-affect-impoverished-countries.jpeg"
+                          class="d-block w-100" alt="images">
+                  </div>
+                  <div class="carousel-item item ">
+                      <img src="https://2firkl1qsbue2ashgy21ze4i-wpengine.netdna-ssl.com/wp-content/uploads/Disaster_Response1200x630.png"
+                          class="d-block w-100" alt="images">
+                  </div>
+                  <div class="carousel-item  item">
+                      <img src="https://i.guim.co.uk/img/media/a46cde291cecd31993c1152a057c4099f9fb6875/0_250_5568_3341/master/5568.jpg?width=1200&quality=85&auto=format&fit=max&s=e03f9f1f5c4d04827075c9c2a645cd0c"
+                          class="d-block w-100 " alt="">
+                  </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+      </div>
+  </div>
 
-    
-    
+
+
+  <div class="light-wrapper mt-2 pt-4 px-4">
+      <div class=" inner sec-one">
+          <div class="headline text-center">
+              <h2 class="text-dark">Welcome to DiRe</h2>
+              <h2 style="color: #8c8989;">An Initiative for Disaster Relief</h2>
+              <br>
+              <p class="lead">DiRe is an organisation, providing disaster response &
+                  preparedness services across India. As a disaster relief agency, we help people to survive and
+                  rebuild their lives through food, medical, education, shelter and livelihood programs. Our most
+                  recent interventions in Maharashtra, Karnataka and Assam have impacted thousands of lives!</p>
+          </div>
+      </div>
+
+
+      <div class="container mb-3">
+          <div class="d-flex justify-content-evenly">
+              <div>
+                  <img loading="lazy" class="fl-photo-img wp-image-703 size-thumbnail"
+                      src="https://worldrelief.org/content/uploads/2020/02/leaf_Artboard41copy-150x150.png"
+                      alt="leaf icon" itemprop="image" height="150" width="100%" title="leaf_Artboard+41+copy"
+                      srcset="https://worldrelief.org/content/uploads/2020/02/leaf_Artboard41copy-150x150.png 150w, https://worldrelief.org/content/uploads/2020/02/leaf_Artboard41copy.png 300w"
+                      sizes="(max-width: 150px) 100vw, 150px">
+                  <p>Food & Clean Water</p>
+              </div>
+              <div>
+                  <img loading="lazy" class="fl-photo-img wp-image-671 size-thumbnail"
+                      src="https://worldrelief.org/content/uploads/2020/02/RebuildFutures-150x150.png" alt="care icon"
+                      itemprop="image" height="150" width="100%" title="RebuildFutures"
+                      srcset="https://worldrelief.org/content/uploads/2020/02/RebuildFutures-150x150.png 150w, https://worldrelief.org/content/uploads/2020/02/RebuildFutures.png 250w"
+                      sizes="(max-width: 150px) 100vw, 150px">
+                  <p>Safe,Reliable Shelter</p>
+              </div>
+              <div>
+                  <img loading="lazy" class="fl-photo-img wp-image-704 size-thumbnail"
+                      src="https://worldrelief.org/content/uploads/2020/02/waterspout_Artboard41copy14-150x150.png"
+                      alt="waterspout icon" itemprop="image" height="150" width="100%"
+                      srcset="https://worldrelief.org/content/uploads/2020/02/waterspout_Artboard41copy14-150x150.png 150w, https://worldrelief.org/content/uploads/2020/02/waterspout_Artboard41copy14.png 300w"
+                      sizes="(max-width: 150px) 100vw, 150px" title="waterspout_Artboard+41+copy+14">
+                  <p>Sanitation & Hygiene</p>
+              </div>
+              <div>
+                  <img loading="lazy" class="fl-photo-img wp-image-670 size-thumbnail"
+                      src="https://worldrelief.org/content/uploads/2020/02/Humanitarian-150x150.png" alt="aid icon"
+                      itemprop="image" height="150" width="100%"
+                      srcset="https://worldrelief.org/content/uploads/2020/02/Humanitarian-150x150.png 150w, https://worldrelief.org/content/uploads/2020/02/Humanitarian.png 250w"
+                      sizes="(max-width: 150px) 100vw, 150px" title="Humanitarian">
+                  <p>Emergency Nutrition</p>
+
+              </div>
+              <div>
+                  <img loading="lazy" class="fl-photo-img wp-image-625 size-thumbnail"
+                      src="https://worldrelief.org/content/uploads/2020/02/girl_Artboard41copy11-150x150.png"
+                      alt="woman icon" itemprop="image" height="150" width="100%"
+                      srcset="https://worldrelief.org/content/uploads/2020/02/girl_Artboard41copy11-150x150.png 150w, https://worldrelief.org/content/uploads/2020/02/girl_Artboard41copy11.png 300w"
+                      sizes="(max-width: 150px) 100vw, 150px" title="girl_Artboard+41+copy+11">
+                  <p>Psychosocial Support</p>
+              </div>
+          </div>
+      </div>
+
+      <h3 class="title font-weight-light text-dark text-center mb-6  mt-3" id="Reach">Our Reach & Impact
+      </h3>
+      <section id="statistic" class="statistic-section one-page-section mb-4">
+          <div class="container">
+              <div class="row text-center">
+                  <div class="col-xs-12 col-md-3">
+                      <div class="counter">
+                          <i class="fa fa-coffee fa-2x stats-icon"></i>
+                          <h2 class="timer count-title count-number">34</h2>
+                          <div class="stats-line-black"></div>
+                          <p class="stats-text">Rescue Operations Executed</p>
+                      </div>
+                  </div>
+                  <div class="col-xs-12 col-md-3">
+                      <div class="counter">
+                          <i class="fa fa-code fa-2x stats-icon"></i>
+                          <h2 class="timer count-title count-number">466
+                          </h2>
+                          <div class="stats-line-black"></div>
+                          <p class="stats-text">Collabration Projects</p>
+                      </div>
+                  </div>
+                  <div class="col-xs-12 col-md-3">
+                      <div class="counter">
+                          <i class="fa fa-clock-o fa-2x stats-icon"></i>
+                          <h2 class="timer count-title count-number">6 Lakh +</h2>
+                          <div class="stats-line-black"></div>
+                          <p class="stats-text">Lives Impacted</p>
+                      </div>
+                  </div>
+                  <div class="col-xs-12 col-md-3">
+                      <div class="counter">
+                          <i class="fa fa-laptop fa-2x stats-icon"></i>
+                          <h2 class="timer count-title count-number">14</h2>
+                          <div class="stats-line-black"></div>
+                          <p class="stats-text">Awards & Recognition</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <h3 class="text-center mt-4 mb-4 ">Together, we’re saving lives—before, during and after disaster strikes.
+      </h3>
+      <div class="container d-flex justify-content-center mt-3 w-150 mb-3">
+          <div class="row">
+              <div class="col pr-0 mr-0">
+                  <div class="card" style="width: 25rem; background-color:rgb(245, 239, 239);">
+                      <div class="card-body">
+                          <h2 style="text-align: center;">Donate Now</h2>
+
+                          <p style="text-align: center;">Your generosity makes a transformative and lifelong
+                              impact. When you give, you’ll join our family of passionate changemakers
+                              committed to changing our world.</p>
+                          <div class="text-center">
+                              <a href="/donate/money" class="btn btn-primary text-center"> Donate </a>
+
+                          </div>
+
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <img src="https://worldrelief.org/content/uploads/2020/02/img-about-hero.jpg" alt="img-about-hero"
+                      height="250" width="300"
+                      srcset="https://worldrelief.org/content/uploads/2020/02/img-about-hero.jpg 705w, https://worldrelief.org/content/uploads/2020/02/img-about-hero-300x213.jpg 300w"
+                      sizes="(max-width: 705px) 100vw, 705px" title="img-about-hero">
+              </div>
+              <div class="col mt-3">
+
+                  <p>
+                      Disaster Risk Reduction
+                      We also believe there is an opportunity to reduce suffering by taking a proactive approach to
+                      disasters, so we work to reduce communities’ underlying vulnerabilities and build cultures of
+                      resilience.
+                      We train and mobilize churches and community members to share disaster preparedness messages
+                      with neighbors so that when disasters do strike, devastation and loss are significantly reduced.
+                  </p>
+
+              </div>
+
+
+          </div>
+
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+          crossorigin="anonymous"></script>
