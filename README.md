@@ -43,7 +43,7 @@ This website will also provide general awareness, guidelines and rules during va
 1. Clone the repository
 
 ```
-git clone https://github.com/Nishtan/DiRe
+git clone https://github.com/bbhavik16/DiRe
 ```
 
 2. Install Node.js (JavaScript runtime environment) and MongoDB(document-oriented database program)
